@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99184784d1e4ff74685754bc9fa4c77d, type: 3}
+  m_Name: ComputerPartsCollection
+  m_EditorClassIdentifier: 
+  SystemUnit:
+  - Device: 0
+    DeviceName: Motherboard
+    DeviceImg: {fileID: 21300000, guid: 3602cf4bb77868945b705d47f58ced68, type: 3}
+    DeviceDescription: A motherboard is the main printed circuit board (PCB) in a
+      computer. The motherboard is a computer's central communications backbone connectivity
+      point, through which all components and external peripherals connect. Motherboards
+      can be found in virtually all computers, especially desktop and laptop PCs.
+  - Device: 1
+    DeviceName: Power Supply
+    DeviceImg: {fileID: 21300000, guid: 923065e6cf2abf7479b43a868794d86f, type: 3}
+    DeviceDescription: "A power supply is a component that supplies power to at least
+      one electric load. Typically, it converts one type of electrical power to another,
+      but it may also convert a a different form of energy \u2013 such as solar,
+      mechanical, or chemical - into electrical energy. A power supply provides components
+      with electric power."
+  - Device: 2
+    DeviceName: Processor
+    DeviceImg: {fileID: 21300000, guid: 32597e86d86d53b4281bbf655a8f11e8, type: 3}
+    DeviceDescription: The processor, also known as the CPU, provides the instructions
+      and processing power the computer needs to do its work. The more powerful and
+      updated your processor, the faster your computer can complete its tasks. By
+      getting a more powerful processor, you can help your computer think and work
+      faster.
+  - Device: 3
+    DeviceName: RAM
+    DeviceImg: {fileID: 21300000, guid: b2826e8dbb9465340a906075e1b0c081, type: 3}
+    DeviceDescription: RAM stands for random-access memory, but what does that mean?
+      Your computer RAM is essentially short term memory where data is stored as
+      the processor needs it. This isn't to be confused with long-term data that's
+      stored on your hard drive, which stays there even when your computer is turned
+      off.
+  InputDevices: []
+  StorageDevices: []
+  OutputDevices: []
