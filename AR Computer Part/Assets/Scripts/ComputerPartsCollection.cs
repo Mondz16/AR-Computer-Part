@@ -22,5 +22,14 @@ public class ComputerPart
 
 public enum Device {
     //System Unit
-    Motherboard, PowerSupply, Processor, RAM
+    Motherboard, PowerSupply, Processor, RAM,
+    
+    //Input Devices
+    Keyboard, Mouse , Microphone , Webcam, Touchpad, Scanner,
+    
+    //Storage
+    USB, HDD, SSD, CD , DVD , FD,
+    
+    // Output Devices
+    Monitor, Headphone, Speaker, SoundCard, VideoCard, Printer
 }

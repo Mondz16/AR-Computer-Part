@@ -55,7 +55,27 @@ public class UIManager : MonoBehaviour
         {
             SubDevicesButton subDeviceButton = Instantiate(SubDeviceButton, SubDeviceHolder);
             int temp = i;
-            subDeviceButton.SetDevice(ComputerPartsCollection.InputDevices[temp].DeviceName , ComputerPartsCollection.InputDevices[temp].DeviceImg , () => OpenPart(ComputerPartsCollection.InputDevices[temp].Device));
+            subDeviceButton.SetDevice(ComputerPartsCollection.InputDevices[temp].DeviceName , ComputerPartsCollection.InputDevices[temp].DeviceImg , 
+                () =>
+                {
+                    PartsPanel.SetActive(true);
+                    for (int a = 0; a < ComputerPartsCollection.InputDevices.Count; a++)
+                    {
+                        if (ComputerPartsCollection.InputDevices[a].Device == ComputerPartsCollection.InputDevices[temp].Device)
+                        {
+                            PartHeader.text = ComputerPartsCollection.InputDevices[a].DeviceName;
+                            PartImage.sprite = ComputerPartsCollection.InputDevices[a].DeviceImg;
+                            int temp1 = a;
+                            DescriptionButton.onClick.AddListener(() =>
+                            {
+                                DescriptionPanel.SetActive(true);
+                                PartName.text = ComputerPartsCollection.InputDevices[temp1].DeviceName;
+                                PartDescription.text = ComputerPartsCollection.InputDevices[temp1].DeviceDescription;
+                            });
+                        }
+                    }
+                }
+            );
         }
     }
     
@@ -71,7 +91,28 @@ public class UIManager : MonoBehaviour
         {
             SubDevicesButton subDeviceButton = Instantiate(SubDeviceButton, SubDeviceHolder);
             int temp = i;
-            subDeviceButton.SetDevice(ComputerPartsCollection.SystemUnit[temp].DeviceName , ComputerPartsCollection.SystemUnit[temp].DeviceImg , () => OpenPart(ComputerPartsCollection.SystemUnit[temp].Device));
+            subDeviceButton.SetDevice(ComputerPartsCollection.SystemUnit[temp].DeviceName,
+                ComputerPartsCollection.SystemUnit[temp].DeviceImg,
+                () =>
+                {
+                    PartsPanel.SetActive(true);
+                    for (int a = 0; a < ComputerPartsCollection.SystemUnit.Count; a++)
+                    {
+                        if (ComputerPartsCollection.SystemUnit[a].Device == ComputerPartsCollection.SystemUnit[temp].Device)
+                        {
+                            PartHeader.text = ComputerPartsCollection.SystemUnit[a].DeviceName;
+                            PartImage.sprite = ComputerPartsCollection.SystemUnit[a].DeviceImg;
+                            int temp1 = a;
+                            DescriptionButton.onClick.AddListener(() =>
+                            {
+                                DescriptionPanel.SetActive(true);
+                                PartName.text = ComputerPartsCollection.SystemUnit[temp1].DeviceName;
+                                PartDescription.text = ComputerPartsCollection.SystemUnit[temp1].DeviceDescription;
+                            });
+                        }
+                    }
+                }
+            );
         }
     }
     
@@ -87,7 +128,27 @@ public class UIManager : MonoBehaviour
         {
             SubDevicesButton subDeviceButton = Instantiate(SubDeviceButton, SubDeviceHolder);
             int temp = i;
-            subDeviceButton.SetDevice(ComputerPartsCollection.StorageDevices[temp].DeviceName , ComputerPartsCollection.StorageDevices[temp].DeviceImg , () => OpenPart(ComputerPartsCollection.StorageDevices[temp].Device)); ;
+            subDeviceButton.SetDevice(ComputerPartsCollection.StorageDevices[temp].DeviceName , ComputerPartsCollection.StorageDevices[temp].DeviceImg , 
+                () =>
+                {
+                    PartsPanel.SetActive(true);
+                    for (int a = 0; a < ComputerPartsCollection.StorageDevices.Count; a++)
+                    {
+                        if (ComputerPartsCollection.StorageDevices[a].Device == ComputerPartsCollection.StorageDevices[temp].Device)
+                        {
+                            PartHeader.text = ComputerPartsCollection.StorageDevices[a].DeviceName;
+                            PartImage.sprite = ComputerPartsCollection.StorageDevices[a].DeviceImg;
+                            int temp1 = a;
+                            DescriptionButton.onClick.AddListener(() =>
+                            {
+                                DescriptionPanel.SetActive(true);
+                                PartName.text = ComputerPartsCollection.StorageDevices[temp1].DeviceName;
+                                PartDescription.text = ComputerPartsCollection.StorageDevices[temp1].DeviceDescription;
+                            });
+                        }
+                    }
+                }
+            ); 
         }
     }
     
@@ -103,27 +164,27 @@ public class UIManager : MonoBehaviour
         {
             SubDevicesButton subDeviceButton = Instantiate(SubDeviceButton, SubDeviceHolder);
             int temp = i;
-            subDeviceButton.SetDevice(ComputerPartsCollection.OutputDevices[temp].DeviceName , ComputerPartsCollection.OutputDevices[temp].DeviceImg , () => OpenPart(ComputerPartsCollection.OutputDevices[temp].Device));
-        }
-    }
-    
-    private void OpenPart(Device device)
-    {
-        PartsPanel.SetActive(true);
-        for (int i = 0; i < ComputerPartsCollection.SystemUnit.Count; i++)
-        {
-            if (ComputerPartsCollection.SystemUnit[i].Device == device)
-            {
-                PartHeader.text = ComputerPartsCollection.SystemUnit[i].DeviceName;
-                PartImage.sprite = ComputerPartsCollection.SystemUnit[i].DeviceImg;
-                int temp = i;
-                DescriptionButton.onClick.AddListener(() =>
+            subDeviceButton.SetDevice(ComputerPartsCollection.OutputDevices[temp].DeviceName , ComputerPartsCollection.OutputDevices[temp].DeviceImg , 
+                () =>
                 {
-                    DescriptionPanel.SetActive(true);
-                    PartName.text = ComputerPartsCollection.SystemUnit[temp].DeviceName;
-                    PartDescription.text = ComputerPartsCollection.SystemUnit[temp].DeviceDescription;
-                });
-            }
+                    PartsPanel.SetActive(true);
+                    for (int a = 0; a < ComputerPartsCollection.OutputDevices.Count; a++)
+                    {
+                        if (ComputerPartsCollection.OutputDevices[a].Device == ComputerPartsCollection.OutputDevices[temp].Device)
+                        {
+                            PartHeader.text = ComputerPartsCollection.OutputDevices[a].DeviceName;
+                            PartImage.sprite = ComputerPartsCollection.OutputDevices[a].DeviceImg;
+                            int temp1 = a;
+                            DescriptionButton.onClick.AddListener(() =>
+                            {
+                                DescriptionPanel.SetActive(true);
+                                PartName.text = ComputerPartsCollection.OutputDevices[temp1].DeviceName;
+                                PartDescription.text = ComputerPartsCollection.OutputDevices[temp1].DeviceDescription;
+                            });
+                        }
+                    }
+                }
+            );
         }
     }
 }

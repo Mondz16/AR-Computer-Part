@@ -44,6 +44,43 @@ MonoBehaviour:
       the processor needs it. This isn't to be confused with long-term data that's
       stored on your hard drive, which stays there even when your computer is turned
       off.
-  InputDevices: []
+  InputDevices:
+  - Device: 4
+    DeviceName: Keyboard
+    DeviceImg: {fileID: 21300000, guid: 21468d23fa4705745904a768b4e3f1fb, type: 3}
+    DeviceDescription: A keyboard is for putting information including letters, words
+      and numbers into your computer. You press the individual buttons on the keyboard
+      when you type. The number keys across the top of the keyboard are also found
+      on the right of the keyboard.
+  - Device: 5
+    DeviceName: Mouse
+    DeviceImg: {fileID: 21300000, guid: f89aa62eee025bd47b1a682c21e30ca1, type: 3}
+    DeviceDescription: 'What is mouse explain?
+
+      A mouse is a small device
+      that a computer user pushes across a desk surface in order to point to a place
+      on a display screen and to select one or more actions to take from that position.
+      The mouse first became a widely-used computer tool when Apple Computer made
+      it a standard part of the Apple Macintosh.'
+  - Device: 6
+    DeviceName: Microphone
+    DeviceImg: {fileID: 21300000, guid: c78e6ccd4a6ab3945b931173fe616d68, type: 3}
+    DeviceDescription: a microphone is a hardware peripheral and input device originally
+      invented by Emile Berliner in 1877. A microphone allows computer users to input
+      audio into their computers.
+  - Device: 7
+    DeviceName: Webcam
+    DeviceImg: {fileID: 21300000, guid: fb2605c48d4ece24686fedcbf5262820, type: 3}
+    DeviceDescription: A webcam is a digital video device commonly built into a computer.
+      Its main function is to transmit pictures over the Internet. It is popularly
+      used with instant messaging services and for recording images.
+  - Device: 8
+    DeviceName: Touchpad
+    DeviceImg: {fileID: 21300000, guid: cb29e3591d27a524882f72f9b00c788a, type: 3}
+    DeviceDescription: A touch pad is a device for pointing (controlling input positioning)
+      on a computer display screen. It is an alternative to the mouse. Originally
+      incorporated in laptop computers, touch pads are also being made for use with
+      desktop computers. A touch pad works by sensing the user's finger movement
+      and downward pressure.
   StorageDevices: []
   OutputDevices: []
